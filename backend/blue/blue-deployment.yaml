@@ -15,8 +15,9 @@ spec:
       description: This-is-blue-deployment-v1.0.0
   template:
     metadata:
-      version: v1.0.0
-      description: This-is-blue-deployment-v1.0.0
+      labels:
+        version: v1.0.0
+        description: This-is-blue-deployment-v1.0.0
     spec:
       containers:
       - name: backend-v1.0.0
