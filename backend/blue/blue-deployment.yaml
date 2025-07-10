@@ -20,9 +20,9 @@ spec:
     spec:
       containers:
       - name: backend-v1.0.0
-        image: naveenrajoli/2025backend:1.0.0
+        image: naveenrajoli/backend:1.0.0
         ports:
-        - containerPort: 80
+        - containerPort: 8080
         envFrom:
         - configMapRef:
             name: backend-configmap
