@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-green
+  namespace: expense
+  labels:
+    project: expense
+    version: v2.0.0
+    description: This-is-green-deployment-v2.0.0
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      version: v2.0.0
+      description: This-is-green-deployment-v2.0.0
+  template:
+    metadata:
+      labels:
+        version: v2.0.0
+        description: This-is-green-deployment-v2.0.0
+    spec:
+      containers:
+      - name: green-backend-v2
+        image: naveenrajoli/backend:2.0.0
+        ports:
+        - containerPort: 8080
+        envFrom:
+        - configMapRef:
+            name: backend-configmap
