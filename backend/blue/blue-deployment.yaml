@@ -20,7 +20,7 @@ spec:
         description: This-is-blue-deployment-v1.0.0
     spec:
       containers:
-      - name: backend-v1.0.0
+      - name: blue-backend-v1
         image: naveenrajoli/backend:1.0.0
         ports:
         - containerPort: 8080
