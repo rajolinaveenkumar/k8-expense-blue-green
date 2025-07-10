@@ -4,11 +4,11 @@ metadata:
   name: backend-svc 
   namespace: expense
   labels:
-    description: this-is-main-backend-service 
+    description: This-is-backende-main-service
 spec:
   selector: 
     version: v1.0.0
-    description: This-is-blue-deployment-v1.0.0
+    description: This-is-backende-blue-deployment-v1.0.0
   ports:
   - protocol: TCP
     port: 8080

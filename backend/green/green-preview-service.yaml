@@ -8,7 +8,7 @@ metadata:
 spec:
   selector: 
     version: v2.0.0
-    description: This-is-green-deployment-v2.0.0
+    description: This-is-backend-green-deployment-v2.0.0
   ports:
   - protocol: TCP
     port: 8080

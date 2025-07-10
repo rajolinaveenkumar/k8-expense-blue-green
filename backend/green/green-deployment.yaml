@@ -6,18 +6,18 @@ metadata:
   labels:
     project: expense
     version: v2.0.0
-    description: This-is-green-deployment-v2.0.0
+    description: This-is-backend-green-deployment-v2.0.0
 spec:
   replicas: 2
   selector:
     matchLabels:
       version: v2.0.0
-      description: This-is-green-deployment-v2.0.0
+      description: This-is-backend-green-deployment-v2.0.0
   template:
     metadata:
       labels:
         version: v2.0.0
-        description: This-is-green-deployment-v2.0.0
+        description: This-is-backend-green-deployment-v2.0.0
     spec:
       containers:
       - name: green-backend-v2
