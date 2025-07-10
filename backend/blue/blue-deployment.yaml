@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-blue
+  namespace: expense
+  labels:
+    project: expense
+    version: v1.0.0
+    description: This-is-blue-deployment-v1.0.0
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      version: v1.0.0
+      description: This-is-blue-deployment-v1.0.0
+  template:
+    metadata:
+      version: v1.0.0
+      description: This-is-blue-deployment-v1.0.0
+    spec:
+      containers:
+      - name: backend-v1.0.0
+        image: naveenrajoli/2025backend:1.0.0
+        ports:
+        - containerPort: 80
+        envFrom:
+        - configMapRef:
+            name: backend-configmap
